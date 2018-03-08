@@ -1,0 +1,2806 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+    body{
+        -webkit-text-size-adjust: none;
+    }
+	table {
+	  border-collapse:collapse;
+	  font-size:8px;
+	  text-align:center;
+	  width:100%;
+	  table-layout:fixed;
+        border:2px #2F4F4F solid;
+
+  }
+	td{
+		border:1px solid #ccc;
+		width: 12px;
+        height: 11px;
+	}
+    
+    .recorde-text{
+        width: 13px;
+        height: 8px;
+        color: #ff0000;
+        font-size: 10px;
+        -webkit-transform:scale(0.9);
+        position: relative;
+        top: -4px;
+    }
+	.table_wrap{
+		position:relative;
+		margin:0 auto;
+        width: 835px;
+	}
+	
+	    .container{
+                margin: 30px auto;
+                width: 800px;
+                height: 758px;
+				position:absolute;
+				top: 170px;
+   				left: 40px;
+            }
+            .axis path,
+            .axis line,
+            .line {
+                stroke: #000;
+                fill: none;
+            }
+    .tick,.domain{
+        display: none;
+    }
+	.temperature_mark td p{
+        position: relative;
+        top: 0;
+        margin-top: 55px;
+    }
+    .num_wrapper{
+        width:58px;
+        height: 636px;
+        position:relative;
+    }
+    .pain_wrapper{
+        position:absolute;
+        width: 100%;
+        height:70px;
+        right: 0;
+        bottom:-3px;
+        border: 1px solid #ccc;
+    }
+    .legend{
+        position:absolute;
+        width: 100%;
+        height:70px;
+        right: 0;
+        bottom:8px;
+    }
+	
+	.line {
+	  fill: none;
+	  stroke: black;
+	  stroke-width: 2px;
+	}
+	.zeroline {
+	    fill: none;
+	    stroke: red;
+	    stroke-width: 0.5px;
+	    stroke-dasharray: 5 5;
+	}
+
+	.zerolinetext {
+	    fill: red;
+	}
+
+	.overlay {
+	    fill: none;
+	    stroke: none;
+	    pointer-events: all;
+	    x: 8;
+		y: -56;
+	}
+
+	.focusLine {
+	    fill: none;
+	    stroke: red;
+	    stroke-width: 0.5px;
+	}
+    .breath_td_odd{
+        vertical-align: top;font-size:10px;-webkit-transform:scale(0.9);
+    }
+    .breath_td_even{
+         vertical-align: bottom;font-size:10px;-webkit-transform:scale(0.9);
+    }
+    .tooltip{
+         font-family: "宋体";
+         font-size: 10px;
+         line-height: 16px;
+         color:#736269;
+         width: auto;
+         height: auto;
+         padding: 4px;
+         position: absolute;
+         text-align: left;
+         border:1px solid #736269; 
+         background-color: #E7E9F3;
+         border-radius: 2px;
+         background: -webkit-linear-gradient(#FEFDFF,#E5E5F1); /* Safari 5.1 - 6.0 */
+         background: -o-linear-gradient(#FEFDFF,#E5E5F1); /* Opera 11.1 - 12.0 */
+         background: -moz-linear-gradient(#FEFDFF,#E5E5F1); /* Firefox 3.6 - 15 */
+         background: linear-gradient(#FEFDFF,#E5E5F1); /* 标准的语法（必须放在最后） */
+     }
+
+</style>
+</head>
+
+<body>
+<div class="table_wrap">
+ <div class="container">
+     <svg width="100%" height="100%">
+
+     </svg>
+</div>
+<table class="temperatureChart">
+    <caption>
+        <p style="font-size: 20px;font-weight: bold">中山大学孙逸仙纪念医院</p>
+        <p style="font-size:14px;">体温单</p>
+        <p style="position: relative;">
+            姓名：<span contenteditable="true" style="display: inline-block;width:80px;text-align: left"></span>
+            年龄：<span contenteditable="true" style="display: inline-block;width:65px;text-align: left"></span>
+            性别：<span contenteditable="true" style="display: inline-block;width:65px;text-align: left"></span>
+            科别：<span contenteditable="true" style="display: inline-block;width:180px;text-align: left"></span>
+            床号：<span contenteditable="true" style="display: inline-block;width:60px;text-align: left"></span>
+            住院号：<span contenteditable="true" style="display: inline-block;width:100px;text-align: left"></span>
+        </p>
+    </caption>
+
+	<thead>
+
+    </thead>
+    <tbody>
+    	<tr>
+        	<td colspan="6">日期</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">2017-05-15</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">05-16</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">05-17</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">05-18</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">05-19</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">05-20</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">05-21</td>
+        </tr>
+        <tr>
+        	<td colspan="6">住院天数</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">01</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">02</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">03</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;">04</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+        </tr>
+        <tr>
+        	<td colspan="6">手术或产后日数</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+        </tr>
+        <tr>
+        	<td rowspan="2" colspan="6">时间</td>
+            <td colspan="3">上午</td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;">下午</td>
+            <td colspan="3">上午</td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;">下午</td>
+            <td colspan="3">上午</td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;">下午</td>
+            <td colspan="3">上午</td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;">下午</td>
+            <td colspan="3">上午</td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;">下午</td>
+            <td colspan="3">上午</td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;">下午</td>
+            <td colspan="3">上午</td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;">下午</td>
+        </tr>
+        <tr >
+        	<td>2</td>
+            <td>6</td>
+            <td>10</td>
+            <td>2</td>
+            <td>6</td>
+            <td style="border-right: 1px solid #FF6E71;">10</td>
+            <td>2</td>
+            <td>6</td>
+            <td>10</td>
+            <td>2</td>
+            <td>6</td>
+            <td style="border-right: 1px solid #FF6E71;">10</td>
+            <td>2</td>
+            <td>6</td>
+            <td>10</td>
+            <td>2</td>
+            <td>6</td>
+            <td style="border-right: 1px solid #FF6E71;">10</td>
+            <td>2</td>
+            <td>6</td>
+            <td>10</td>
+            <td>2</td>
+            <td>6</td>
+            <td style="border-right: 1px solid #FF6E71;">10</td>
+            <td>2</td>
+            <td>6</td>
+            <td>10</td>
+            <td>2</td>
+            <td>6</td>
+            <td style="border-right: 1px solid #FF6E71;">10</td>
+            <td>2</td>
+            <td>6</td>
+            <td>10</td>
+            <td>2</td>
+            <td>6</td>
+            <td style="border-right: 1px solid #FF6E71;">10</td>
+            <td>2</td>
+            <td>6</td>
+            <td>10</td>
+            <td>2</td>
+            <td>6</td>
+            <td>10</td>
+        </tr>
+
+        <tr class="recorde temperature_mark">
+        	<td colspan="3" rowspan="45">
+                <div class="num_wrapper">
+                    <p style="margin-top:0;">脉搏<br/>（次/分）</p>
+                    <p style="margin-top: 27px;">160</p>
+                    <p>140</p>
+                    <p>120</p>
+                    <p>100</p>
+                    <p>80</p>
+                    <p>60</p>
+                    <p>40</p>
+                    <p style="margin-top:48px">20</p>
+                    <div class="legend">
+                        <div style="float: left;width: 80%;height:100%;padding-top:3px;font-size:10px;-webkit-transform:scale(0.9);">
+                            腋温<br/>口温<br/>肛温<br/>心率<br/>脉搏
+                        </div>
+                        <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAFGCAYAAAA/2VwbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA8ZSURBVHhe7ZxnqB1FG8dj11ivCBYsGCt2sVciiorIVUQUNYh+sCEqGvWTJYKioKjEhvWLvYsiNtQgqNiJX0TEBlHsMYkxJjGZ9/zm3Tmcs2d2dmZntsxx/vDAuXt2Z+a388wzz87suVPEmCsBxq4EGLsSoE4rVqwQy5Yty/6qXz51OQP+8ccf4p133hGvvvqqWLBgQXa0Pn399dfixRdfFHPnzhX//PNPdtReToB///23eOCBB8QhhxwiDj/8cPHCCy/U2pO//vqruOmmm8Q+++wjJicn5Y11lTXg8uXLxcMPPyx23XVXMWXKFGlHHXWUePnll8XSpUuzs8Lpt99+E7fffrvYZZdd+vWdcMIJ4oMPPsjOsJM1IBA33HCD2GyzzfoVYscee2xwyN9//13ccccdYueddx6qi558/vnns7PsZA24cuVK6TLXX3+92GKLLfqVrr766rInX3nlFdnLvmKM33XXXWK77bYbgtt3333Fc889J/7666/sTDs5B5lffvlF3HzzzUOQa665pjjyyCNl4PGBxC3vvvvuEbj9999fvPTSS/UHGaWff/5Z3HjjjUOQq666qjj66KPF66+/XgkSt7zzzjvFbrvtNgR3wAEHiGeeeUZ6UBVVAkS40nXXXTcEiR1//PHitddec4quf/75p+y53Xfffais/fbbTzzxxBPZWdVUGRAxD86aNWso8KyyyiriuOOOE2+88Yb4999/szOLBdx99903ElD23ntv8fTTT8ukwkdegIhxQ+DZdNNN+41ba621xDHHHCPefPNNI+T8+fPF/fffL3baaachuL322ksGlCVLlmRnVpc3IPrxxx9HINdYYw05hbz11ltaSODoucF5FaPnnnrqqUoBRacggIjAc+21147Mk4xJenIw8AB37733yp4aPJd57rHHHqscUHQKBoiIhFddddVQT2InnniimDNnjkwGmMcefPBBscceewydA+yjjz6alRROQQERkNdcc43YZJNN+o1nnjz55JNl0qzgCEbqe6Lnk08+GcwtBxUcEP3www9yChmEXHfddSXYDjvs0D+GcQy4xYsXZ1eHVS2AaN68eeLqq68WW2655RDQoDHmSODrfCKpDRDhrhdddJHYYIMNRuBIxwg0datWQAIK6df2228/AkiCTsZTt2oDXLRokYyKJMqMvzwg4/PUU08V7777btBpIa9aAIFjbDFpK6DVVltNuuog7DrrrCNOOukk8d5779UGGRwQuEceeUQcdNBBfRCMnmT6uOSSS0aeJ0855RQJ6Zt36hQUkFBPJgLMIByJNDkn4nny0ksvFRtvvHH/e+bE008/vRbIYIDA8WhD6OfZUDWeee+hhx4aehInd505c6bYcMMN++fhrozJ999/PzsrjIIADsKpBmM77rijzFx0y4vffvutuOKKK4amkPXWW0+6q+vCkknegAru4IMPHoG755575FJjkVjzxF032mij/nX05GmnnSY+/PDD7Cw/eQHSeB5tDjvssCE43JL5z2al7fvvvxcXXnjhkLsSeM4880wJ2doDLw+jzz77rDjwwAOHxhwZCssPLokzaR2Q66+/fr8cEnQgP/roI68ppBIgPQccC0LMb6pR06ZNk+kXz3uu+u677+QUMgjJ5zPOOEN8/PHH2VnucgZUPZcfc/Qc65mssVTVl19+KS6++OIRyBkzZohPP/00O8tNToBEQ9ZKjjjiiBG42267zRhQbPXVV1+J888/fyi6rr322uKss84Sn3zyifMKujUgg53NlnzPbbvtthIuxAKREu56zjnnDPUkQ+Hss88Wn3/+eXaWnawBuXOXX365XDFTlW699dZyD8HHLYv0zTffiPPOO09MnTq1X98222zjvKxhDcjKGOsqbGMpuNmzZ8tnvrrEmMRduakTExMyMfjiiy+yb+3kHGSAJNrdeuutcnW7brHxeeWVV8olEOZMVzkD0pNkL8xzdT7HKTH2CV6M8Sr1OQPGpgQYuxJg7EqAsSsBxq4EGLsSYOxKgLErAcauBBi7EmDsSoCxKwHGrgRYRT/99JPcJL3sssvky7C8MskbFBifOcZ3nFNlN9hFwQCB4pVmANR2l61xDddSRmh5A9IoeoPe0TXexSiDskKCVgYMCZa3kKCVAdmY1DUupFGHr5wBCQr5NwnrNOryCUTOgE3CKePXplXlBHjuuedqG9CEUXcVWQPy211dxU0abXCVFSDRrI5o6Wq0wTWyWgG26Zp5Y/pwUSkg73TqKmrLXHuxFJDXp3QVtWkuAacUkHfRdJW0abTJVkbArrnnoNE2GxkBb7nlFm3hXTDaZiMjIM9tusK7YLTNRkbANtIyW7NN34yAXQwwymwDjRGwC9lLkdE2G/23AcfeRRnIusK7YEGCzNhPE2M/0Y99qoa6GGhsAwwqBeQBU1dJm+by0FsKiCt0aT6kLUEfeFGXejH4kgVi4bULvUgbXBeBrQARW126Sps02uAqa0DUpqu6uqaSEyBqI32zzVp0cgYkgjU5N26++ebNbr4oNbF9VnU/YlCVAVGd+xVV9iF08gJEJAIhl/ZZaLbNM23kDajE2MRtq8yXXEOUdN1YsVEwwEG9/fbbssGsyvEGBYECCIzPHOM7zvnss8+yq+pRLYBdUgKMXQkwdiXA2JUAY1cCjF0JMHYlwNiVAGNXAoxdCTB2JcDYlQBjVwKMXbUCskeBsbfOLzwxPqvjTSgoIBsprj9zVT9vrWsTJgggm5UhtrUpI9TGp5IXIO5Wx349ZYZy4UqAvBQwffp0beNCGnX4vICAnAEZK7ZjjPN47YTXQFSQ4TPHXMrwGZ9OgLhN2RY1ALysarPPzjmcyzW6spRRZ1WXtQakAl3lyugVn3HDtWUvGVUp3woQFynqOZ+7qxNlmepydddSQAZ50XjxHR9FMo1zjrsEnlLAomiJO/lGOJNMN5Y22coIWPQKpetdrCoTpO2wMALqJnHGQcg3kcpUNP5pm40KAYveQwsZUGxFnbq22KR1hYC63mPctSXdFGLTi1pA3CJfGNZG7ykV9WJZFNcCklLlC/J56zaUdBkPbTVJC6iLXLa/FapTut9S0VaTtID5QrAmI2eRaIOubSaNfKvz9bK71KR03mWKDVaAbUbPvHTR1AlQN/91IcAo6QKN6QcjI4C6CFoWqZqUa/v+e4A6F+VN+K7I20XHPsjoAMdqmuAZLF8ANjYTPdLdpbFK1XSRqqvJdtmN1wKO/eMS0j3wuiz2hJZu8avyAy8a+yULpOvFKouvPqKuWhadUNGdI3KNxbIh0mUOWN2QJjiXzKoU0FQRx+twV8o01elyY0sBUdE4wDgeMvBQlqku1xtqBYiKxqMywrgPKNcW7YMoq1K+NSAy3V1lZBtkFza5K+dwri5DGTQfL3ECRKbxkTfOo1cAIP3D+MwxlzJ8xrkzIGKQF0XXkEYdvpG6EqASbqNLBnyNMqu6ZF5egEqkTCFAKcMm/XJREEAlxgrjzHZ8YZxLoPEZZyYFBcwLN8NYFFJBhs/qeBOqFbALSoCxKwHGrgQYuxJg7EqAsSsBxq4EGLsSYOxKgLErAcauBBi7EmDsSoCxKwHGrloBl8+ZI23Z44+LJbNmSeOzOt6EggKumDtXQizYc08xf8oUK+NcruHaOhQEkF5ZMG2aFsDFKIOyQsoLMBRY3igzlAtXA1y4UCyaPl3buJBGHdTlI2dAxortGFuw1VaykUtmzuwHGT5zjO901+SNunzGpxMgbjN/YkLbEGU0HtddOW9edlWxOIdzS72hV2dVl7UGpCHayjNbNDnpdae5ljJ0ZSurEoCsAKm8sOc87q5O8kYa6nK9ieWAvUFeNOY4buOKrqJMU50ugacUsGh8cNw3whlluLGybksZAYvGnetdrCwDpO2wMAJqJ/HeOKjDLYtUNP5pm40KAYt6L2RAsZWcnjRtsYmqhYC63nPx/dDSxQKbXtQCSrfIFYa10XtKRb1YNm1oAUmp8gUxCbctXSJAW03SAuoi19LZs7Nv2xNtyLdLRnSDtID5QrAmI2eRaIOubSaNfKvz9bK71KR03mWKDVaAbUbPvHTR1AlQN/91IcAo6QKNaT4cAdRF0LJI1aRc2/ffA9S56OIZM7Jv25e3i459kNEBjtU0wTNYvgBsbCZ6pLtLY5Wq6SJVV5PtshuvBRz7xyWkW3luM5rqoidtLFMhoG4+xNroxaLeM81/SoWASLt/UGHx1UdyuOgWnSx6DxkBi3pRRq5xWDZEOt/Haoc0wLnEglJAU0Ucr8NdKdNUp8uNLQfsqWgcSOsdDxl4ZEAx1OV6Q60AUVEkU4bb+IBybdFwUFalfGtAZLy7mZFtkF3Y5K6cw7m6DGXIPLzECRCZxkfeOI9eAYD0D+Mzx1zK8BnnzoBSvUFe5k4hjDp8I3U1wEzMk7YvE7gYZfqM50F5ASqFAqUMm/TLRUEAlRgrjDPb8YVxLoHGZ5yZFBQwL9wMo1dUkOGzOt6EagXsghJg7EqAsSsBxq4EGLsSYOxKgLErAcauBBi7EmDsSoCxKwHGrgQYuxJg7KoFkJ1buR/B73UnJ/+/GcPOcM/4LDdEe9/JnSTP/b8yBQMEika77Cwp4xo2Zmy2vV3lDajA5k+dqm28k/XKoKyQoJUBg4LlLSBoZcDFF1ygb1xAow5fuQPyAsKhh2obVIdRl08gcgZsEk6ZhKwoJ8Am3LLIqrqrNaDuhfCmrez9bJ2sAIlmtURLV+u1wTWyWgG26Zp5Y/pwUSmg7D1NRa2ZYy+WAvLDLG1FLZpLwCkF1P43hJbN9r8gICMgr1fpKuiC2b76ZQQkw9cV3gWjbTYyApa+idui2f5o0wzYQlpma/JlWQsZAet42TWUef+7FdSJ7KXIJiayVpplBix5w75VCwHYxTlQWRAXbeLN+qoWJMh0MU1TFmSaGPuJfuxTNTTWyTaSa5+aSto0l4feUsDOLFcoC/3Ai7rUi8GXLKQWLuxGVtPrPddFYDvAntjq0lbaoMntNkdZA6I2XdXVNZWcAFErS/e9B++qcgYkgjX5nEhdjW6+KDWxGFx1P2JQlQFRnfsVVfYhdPICROSEsjcDJQM8JdjmmTbyBlRibFYG7V1DlHTJUGwVDHBQ/HyVBhNxeYNCBiXAe8ZnkmW+45yQvaVTLYBdUgKMW0L8D+3eWKStuTvOAAAAAElFTkSuQmCC" style="width: 12px;height: 71px;float: right;position: relative;top: -66px;right: 4px;">
+                    </div>
+                </div>
+            </td>
+            <td colspan="3"  rowspan="45">
+                <div class="num_wrapper">
+                    <p style="margin-top:0;">腋温<br/>℃</p>
+                    <p style="margin-top: 27px;">41</p>
+                    <p>40</p>
+                    <p>39</p>
+                    <p>38</p>
+                    <p>37</p>
+                    <p>36</p>
+                    <p>35</p>
+                    <p style="margin-top:48px">34</p>
+                    <div class="pain_wrapper">
+                        <div style="float: left;width: 48%;height:100%;border-right:1px solid #ccc;padding-top:3px;">疼<br/>痛<br/>强<br/>度</div>
+                        <div style="float: right;width: 48%;font-size:10px;-webkit-transform:scale(0.8);position: relative;top:-3px;">
+                            <div>10</div>
+                            <div>8</div>
+                            <div>6</div>
+                            <div>4</div>
+                            <div>2</div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td style="border-right: 1px solid #FF6E71;"><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td style="border-right: 1px solid #FF6E71;"><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td style="border-right: 1px solid #FF6E71;"><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td style="border-right: 1px solid #FF6E71;"><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td style="border-right: 1px solid #FF6E71;"><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td style="border-right: 1px solid #FF6E71;"><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+            <td><div class='recorde-text'></div></td>
+        </tr>
+        <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-right: 1px solid #FF6E71;border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+            <td style="border-bottom: 1px solid #7E7EFF;"></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr> <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr class="recorde">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: 1px solid #FF6E71;"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+
+         <tr >
+            <td colspan="6" rowspan="2" style="height:30px">呼吸（次/分）</td>
+            <td  rowspan="2" class="breath_td_odd" title="
+            呼吸：19次/分&#10;录入信息：2017-11-02&#10;姓名：张三">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even" style="border-right: 1px solid #FF6E71;">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even" style="border-right: 1px solid #FF6E71;">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even" style="border-right: 1px solid #FF6E71;">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even" style="border-right: 1px solid #FF6E71;">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even" style="border-right: 1px solid #FF6E71;">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even" style="border-right: 1px solid #FF6E71;">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+            <td  rowspan="2" class="breath_td_odd">19</td>
+            <td  rowspan="2" class="breath_td_even">20</td>
+        </tr>
+        <tr></tr>
+         <tr>
+            <td colspan="6">血压(mmHg)</td>
+            <td colspan="3"></td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="3"></td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="3"></td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="3"></td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="3"></td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="3"></td>
+            <td colspan="3" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+        	<td colspan="6">入量（ml）</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+        </tr>
+        <tr>
+        	<td colspan="6">出量（ml）</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+        </tr>
+        <tr>
+        	<td colspan="6">大便（次/日）</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+        </tr>
+        <tr>
+        	<td colspan="6">小便（次/日）</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+        </tr>
+        <tr>
+        	<td colspan="6">身高体重</td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+            <td colspan="6" style="border-right: 1px solid #FF6E71;"></td>
+        </tr>
+        <tr>
+        	<td colspan="6">过敏药物</td>
+            <td colspan="42"></td>        
+        </tr>
+    </tbody>
+</table>
+    
+</div>
+    <script src="jquery-3.2.1.slim.min.js" charset="utf-8"></script>
+    <script src="d3.v3.min.js" charset="utf-8"></script>
+
+        <script>
+            window.onload = function() {
+                var width = 682, height = 682;
+                // SVG画布边缘与图表内容的距离
+                var padding = { top: 50, right: 0, bottom: 50, left: 50 };
+                // 创建一个分组用来组合要画的图表元素
+                var main = d3.select('.container svg').append('g')
+                        .classed('main', true)
+                        .attr('transform', "translate(" +80 + ',' + 80 + ')');
+                // 模拟数据
+                var dataset = [         //腋下温度【叉号】
+                    {x: 0, y: 40}, {x: 1, y: 38},{x: 2, y: 38}, {x: 3, y: 38},
+                    {x: 4, y: 38}, {x: 5, y: 38},{x: 6, y: 38}, {x: 7, y: 38},
+                    {x: 8, y: 38}, {x: 9, y: 38},{x: 10, y:38}, {x: 11, y: 38},
+					{x: 12, y: 37.5}, {x: 13, y: 38.6},{x: 14, y: 38.6},{x: 15, y: 38.6},
+                    {x: 16, y: 39},{x: 17, y: 39},{x: 18, y: 38.6},{x: 19, y: 38.6},
+                    {x: 20, y: 38.6},{x: 21, y: 38.6},{x: 22, y: 38.6},{x: 23, y: 38.6},
+                    {x: 24, y: 38.6},{x: 25, y: 38.6},{x: 26, y: 38.6},{x: 27, y: 35.6},
+                    {x: 28, y: 35.8},{x: 29, y: 37.4}, {x: 30, y: 36.8},{x: 31, y: 38},
+                    {x: 32, y: 39},{x: 33, y: 37.6}, {x: 34, y: 35.8},{x: 35, y: 36.4},
+                    {x: 36, y: 38.5},{x: 37, y:39}, {x: 38, y: 36.9},{x: 39, y: 36.4},
+                    {x: 40, y: 38.5},{x: 41, y:39}
+                ];
+                var dataset_mouth = [    //口温【黑实圆】
+                 {x: 37, y:40}, {x: 38, y: 40},{x: 39, y: 40},
+                  {x: 40, y: 40},{x: 41, y:40}
+                ];
+              var dataset_anus = [    //肛温【黑空圆】
+                {x: 0, y: 33}, {x: 1, y: 33},{x: 2, y: 33}, {x: 3, y: 33},
+                {x: 4, y: 33}, {x: 5, y: 33},{x: 6, y: 33}, {x: 7, y: 33},
+                {x: 8, y: 33}, {x: 9, y: 33},{x: 10, y:33}, {x: 11, y: 33},
+                {x: 12, y: 37.5}, {x: 13, y: 38.6},{x: 14, y: 38.6},{x: 15, y: 38.6},
+                {x: 16, y: 39},{x: 17, y: 39},{x: 18, y: 38.6},{x: 19, y: 38.6},
+                {x: 20, y: 38.6},{x: 21, y: 38.6},{x: 22, y: 38.6},{x: 23, y: 38.6},
+                {x: 24, y: 38.6},{x: 25, y: 38.6},{x: 26, y: 38.6},{x: 27, y: 35.6},
+                {x: 28, y: 35.8},{x: 29, y: 37.4}, {x: 30, y: 36.8},{x: 31, y: 38},
+                {x: 32, y: 39},{x: 33, y: 37.6}, {x: 34, y: 35.8},{x: 35, y: 36.4},
+                {x: 36, y: 38.5},{x: 37, y:39}, {x: 38, y: 36.9},{x: 39, y: 36.4},
+                {x: 40, y: 38.5},{x: 41, y:33}
+              ];
+              var dataset_heartrate = [    //心率【红空圆】
+                {x: 0, y: 20}, {x: 1, y: 40},{x: 2, y: 30}, {x: 3, y: 120},
+                {x: 4, y: 34}, {x: 5, y: 34},{x: 6, y: 34}, {x: 7, y: 41},
+                {x: 8, y: 36.4}, {x: 9, y: 38.5},{x: 10, y:39}, {x: 11, y: 36.9},
+                {x: 12, y: 37.5}, {x: 13, y: 38.6},{x: 14, y: 38.6},{x: 15, y: 38.6},
+                {x: 16, y: 39},{x: 17, y: 39},{x: 18, y: 38.6},{x: 19, y: 38.6},
+                {x: 20, y: 38.6},{x: 21, y: 38.6},{x: 22, y: 38.6},{x: 23, y: 38.6},
+                {x: 24, y: 38.6},{x: 25, y: 38.6},{x: 26, y: 38.6},{x: 27, y: 35.6},
+                {x: 28, y: 35.8},{x: 29, y: 37.4}, {x: 30, y: 36.8},{x: 31, y: 38},
+                {x: 32, y: 39},{x: 33, y: 37.6}, {x: 34, y: 35.8},{x: 35, y: 36.4},
+                {x: 36, y: 38.5},{x: 37, y:39}, {x: 38, y: 36.9},{x: 39, y: 36.4},
+                {x: 40, y: 38.5},{x: 41, y:33}
+              ];
+              var dataset_pulse = [    //脉搏【红实圆】
+                {x: 0, y: 90}, {x: 1, y: 80},{x: 2, y: 100}, {x: 3, y: 60},
+                {x: 4, y: 36}, {x: 5, y: 36},{x: 6, y: 36}, {x: 7, y: 36},
+                {x: 8, y: 36}, {x: 9, y: 36},{x: 10, y:36}, {x: 11, y: 36},
+                {x: 12, y: 36}, {x: 13, y: 36},{x: 14, y: 36},{x: 15, y: 36},
+                {x: 16, y: 36},{x: 17, y: 36},{x: 18, y: 36},{x: 19, y: 38.6},
+                {x: 20, y: 38.6},{x: 21, y: 38.6},{x: 22, y: 38.6},{x: 23, y: 38.6},
+                {x: 24, y: 38.6},{x: 25, y: 38.6},{x: 26, y: 38.6},{x: 27, y: 35.6},
+                {x: 28, y: 35.8},{x: 29, y: 37.4}, {x: 30, y: 36.8},{x: 31, y: 38},
+                {x: 32, y: 39},{x: 33, y: 37.6}, {x: 34, y: 35.8},{x: 35, y: 36.4},
+                {x: 36, y: 38.5},{x: 37, y:39}, {x: 38, y: 36.9},{x: 39, y: 36.4},
+                {x: 40, y: 38.5},{x: 41, y:33}
+              ];
+              var dataset_pain = [    //脉搏【红实圆】
+                {x: 0, y: 5}, {x: 1, y: 5},{x: 2, y: 5}, {x: 3, y: 5},
+                {x: 4, y: 5}, {x: 5, y: 5},{x: 6, y: 5}, {x: 7, y: 5},
+                {x: 8, y: 5}, {x: 9, y: 5},{x: 10, y:5}, {x: 11, y: 36},
+                {x: 12, y: 36}, {x: 13, y: 36},{x: 14, y: 36},{x: 15, y: 36},
+                {x: 16, y: 36},{x: 17, y: 36},{x: 18, y: 36},{x: 19, y: 38.6},
+                {x: 20, y: 38.6},{x: 21, y: 38.6},{x: 22, y: 38.6},{x: 23, y: 38.6},
+                {x: 24, y: 38.6},{x: 25, y: 38.6},{x: 26, y: 38.6},{x: 27, y: 35.6},
+                {x: 28, y: 35.8},{x: 29, y: 37.4}, {x: 30, y: 36.8},{x: 31, y: 38},
+                {x: 32, y: 39},{x: 33, y: 37.6}, {x: 34, y: 35.8},{x: 35, y: 36.4},
+                {x: 36, y: 38.5},{x: 37, y:39}, {x: 38, y: 36.9},{x: 39, y: 36.4},
+                {x: 40, y: 38.5},{x: 41, y:33}
+              ];
+              $(".main").append('<circle cx="179.2439024390244" cy="582" r="4" stroke="#000000" stroke-width="1" fill="#FFFFFF"></circle>')
+                var xDomain = d3.extent(dataset, function(d) { return d.x; })  
+            	var yDomain = d3.extent(dataset, function(d) { return d.y; });
+                // 创建x轴的比例尺(线性比例尺)
+                var xScale = d3.scale.linear()
+                        .domain(d3.extent(dataset, function(d) {
+                            return d.x;
+                        }))
+                        .range([9, width - padding.left - padding.right+75]);
+                // 创建y轴的比例尺(线性比例尺)
+				
+               /*var yScale = d3.scale.linear()
+                        .domain([0, d3.max(dataset,function(d) {
+                            return d.y;
+                        })])
+                        .range([height - padding.top - padding.bottom, 0]);*/
+				var yScale = d3.scale.linear()
+                        .domain([33, 42])
+                        .range([height - padding.top - padding.bottom,-56]);
+                var yScale_1 = d3.scale.linear()
+                        .domain([0, 180])
+                        .range([height - padding.top - padding.bottom,-55]);
+                var yScale_2 = d3.scale.linear()
+                        .domain([0, 10])
+                        .range([height - padding.top - padding.bottom,height - padding.top - padding.bottom-69]);
+                // 创建x轴
+                var xAxis = d3.svg.axis()
+                        .scale(xScale)
+                        .orient('bottom');
+                // 创建y轴
+                var yAxis = d3.svg.axis()
+                        .scale(yScale)
+                        .orient('left');
+                var yAxis_1 = d3.svg.axis()
+                        .scale(yScale_1)
+                        .orient('left');
+                var yAxis_2 = d3.svg.axis()
+                        .scale(yScale_2)
+                        .orient('left');
+
+               
+                // 添加SVG元素并与x轴进行“绑定”
+                main.append('g')
+                        .attr('class', 'axis')
+                        .attr('transform', 'translate(0,' + (height - padding.top - padding.bottom) + ')')
+                        .call(xAxis);
+
+                // 添加SVG元素并与y轴进行“绑定”
+                main.append('g')
+                        .attr('class', 'axis')
+                        .call(yAxis);
+                main.append('g')
+                        .attr('class', 'axis')
+                        .call(yAxis_1);
+                main.append('g')
+                        .attr('class', 'axis')
+                        .call(yAxis_2);
+
+                // 添加折线
+                var line = d3.svg.line()
+                        .x(function(d) {
+                            return xScale(d.x)
+                        })
+                        .y(function(d) {
+                            return yScale(d.y);
+                        })
+                var line_1 = d3.svg.line()
+                        .x(function(d) {
+                          return xScale(d.x)
+                        })
+                        .y(function(d) {
+                          return yScale_1(d.y);
+                        })
+                var line_2 = d3.svg.line()
+                        .x(function(d) {
+                          return xScale(d.x)
+                        })
+                        .y(function(d) {
+                          return yScale_2(d.y);
+                        })
+                        .interpolate('linear');
+                var line_3 = d3.svg.line()
+		                .x(function(d) { return xScale(d.x); })
+		                .y(function(d) { return yScale(d.y); })
+                    // 选择线条的类型
+                        
+                // 添加path元素，并通过line()计算出值来赋值
+                main.append('path')
+                        .attr('class', 'line')
+                        .attr('d', line(dataset));
+                main.append('path')
+                        .attr('class', 'line')
+                        .attr('d', line(dataset_mouth));
+                main.append('path')
+                        .attr('class', 'line')
+                        .attr('d', line(dataset_anus));
+                main.append('path')
+                        .attr('class', 'line lineColor')
+                        .attr('d', line_1(dataset_heartrate))
+                main.append('path')
+                        .attr('class', 'line lineColor')
+                        .attr('d', line_1(dataset_pulse));
+                main.append('path')
+                        .attr('class', 'line')
+                        .attr('d', line_2(dataset_pain));
+                main.append('path')
+                        .attr('class', 'line')
+                        .attr('d', line_3(dataset));
+               
+
+
+                // 添加点
+
+              /*黑实圆--start*/
+              main.selectAll('rect')
+                .data(dataset_mouth)
+                .enter()
+                .append('circle')
+                .attr('cx', function(d) {
+                  return xScale(d.x);
+                })
+                .attr('cy', function(d) {
+                  return yScale(d.y);
+                })
+                .attr('r', 4)
+                .attr('fill', function(d, i) {
+                  return 'black';
+                });
+                /*黑实圆--end*/
+
+                /*黑空圆--start*/
+              main.selectAll('rect')
+                .data(dataset_anus)
+                .enter()
+                .append('circle')
+                .attr('cx', function(d) {
+                  return xScale(d.x);
+                })
+                .attr('cy', function(d) {
+                  return yScale(d.y);
+                })
+                .attr('r', 4)
+                .attr('stroke','#000000')
+                .attr('stroke-width', 1)
+                .attr('fill','#FFFFFF');
+                /*黑空圆--end*/
+
+                /*红空圆--start*/
+              main.selectAll('rect')
+                .data(dataset_heartrate)
+                .enter()
+                .append('circle')
+                .attr('cx', function(d) {
+                  return xScale(d.x);
+                })
+                .attr('cy', function(d) {
+                  return yScale_1(d.y);
+                })
+                .attr('r', 4)
+                .attr('stroke','#EE0000')
+                .attr('stroke-width', 1)
+                .attr('fill','#FFFFFF');
+                /*红空圆--end*/
+
+
+                /*红实圆--start*/
+              main.selectAll('rect')
+                .data(dataset_pulse)
+                .enter()
+                .append('circle')
+                .attr('cx', function(d) {
+                  return xScale(d.x);
+                })
+                .attr('cy', function(d) {
+                  return yScale_1(d.y);
+                })
+                .attr('r', 4)
+                .attr('fill','#EE0000').on("mouseover",function(d){
+                //(1)取得提示显示的位置
+                var xPosition=parseFloat(d3.select(this).attr("cx"))+698;
+                var yPosition=parseFloat(d3.select(this).attr("cy"))+24;
+
+                //(2)创建提示条SVG
+                d3.select('.container svg').append("text")
+                  .attr("id","tooltip")//设置id便于移除提示
+                  .attr("x",xPosition)
+                  .attr("y",yPosition)
+                  .attr("text-anchor","middle")
+                  .attr("font-family","sans-setif")
+                  .attr("font-size","11px")
+                  .attr("font-weight","bold")
+                  .attr("fill","white")
+                  .text(d.value);
+              })
+              //(3)移除提示条SVG
+
+                /*红实圆--end*/
+				
+				 main.selectAll('rect')
+                .data(dataset_pain)
+                .enter()
+                .append('circle')
+                .attr('cx', function(d) {
+                  return xScale(d.x);
+                })
+                .attr('cy', function(d) {
+                  return yScale_2(d.y);
+                })
+                .attr('r', 4)
+                .attr('stroke','#EE0000')
+                .attr('stroke-width', 1)
+                .attr('fill','#FFFFFF');
+
+              /*【叉形】--start*/
+              main.selectAll('rect')
+                .data(dataset)
+                .enter()
+                .append('line')
+                .attr('x1', function(d) {
+                  return xScale(d.x)-4;
+                })
+                .attr('y1', function(d) {
+                  return yScale(d.y)-4;
+                }).attr({
+                  'x2':function(d) {
+                        return xScale(d.x)+4;
+                    },
+                  'y2':function(d) {
+                        return yScale(d.y)+4;
+                    }
+                })
+                .attr('stroke', function(d, i) {
+                  return 'black';
+                });
+
+              main.selectAll('rect')
+                .data(dataset)
+                .enter()
+                .append('line')
+                .attr('x1', function(d) {
+                  return xScale(d.x)+4;
+                })
+                .attr('y1', function(d) {
+                  return yScale(d.y)-4;
+                }).attr({
+                  'x2':function(d) {
+                    return xScale(d.x)-4;
+                  },
+                  'y2':function(d) {
+                return yScale(d.y)+4;
+              }})
+                .attr('stroke', function(d, i) {
+                  return 'black';
+                });
+              /*腋温【叉形】--end*/
+
+              /*鼠标悬停直线--start
+              var dataset_line = [{x: 0,y: 0}]
+              main.selectAll('rect')
+                .data(dataset_line)
+                .enter()
+                .append('line')
+                .attr({
+                  'x1':100,'y1':-56,
+                  'x2':100,'y2':582
+                })
+                .attr('stroke', function(d, i) {
+                  return 'black';
+                });
+              鼠标悬停直线--end*/
+              $(document).find("path.lineColor").css("stroke","red");
+              $(".recorde:not(:first) td").append("<div class='recorde-text'></div>")
+              $(".temperatureChart tr td").each(function(){
+                      $(this).attr("title",$(this).text());
+                     //alert($(this).parent().get(0).rowIndex);输出所在行
+               });
+
+              /*鼠标悬停提示框*/
+              var tooltip = d3.select("body")
+                                .append("div")
+                                .attr("class","tooltip")
+                                .style("opacity",0.0);
+            
+              main.on("mouseover",function(d){
+                    /*
+                    鼠标移入时，
+                    （1）通过 selection.html() 来更改提示框的文字
+                    （2）通过更改样式 left 和 top 来设定提示框的位置
+                    （3）设定提示框的透明度为1.0（完全不透明）
+                    */
+              tooltip.html("呼吸：19次/分<br/>录入信息：2017-11-02<br/>姓名：张三")
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY + 20) + "px")
+                    .style("opacity",1.0);
+                    //console.log(d3.event.target);
+            })
+            .on("mousemove",function(d){
+                /* 鼠标移动时，更改样式 left 和 top 来改变提示框的位置 */
+                tooltip.style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY + 20) + "px");
+                         //console.log(d3.event.target);
+            })
+            .on("mouseout",function(d){
+                /* 鼠标移出时，将透明度设定为0.0（完全透明）*/
+                
+                tooltip.style("opacity",0.0);
+            });
+                
+
+            };
+            function getColor(idx) {
+                var palette = [
+                    '#2ec7c9', '#b6a2de', '#5ab1ef', '#ffb980', '#d87a80',
+                    '#8d98b3', '#e5cf0d', '#97b552', '#95706d', '#dc69aa',
+                    '#07a2a4', '#9a7fd1', '#588dd5', '#f5994e', '#c05050',
+                    '#59678c', '#c9ab00', '#7eb00a', '#6f5553', '#c14089'
+                ]
+                return palette[idx % palette.length];
+            }
+
+              function addRow(str){
+              var str = '<tr><td colspan="6">'+str+'</td><td colspan="6"></td>'
+                +'<td colspan="6" ></td>'
+                +'<td colspan="6" ></td>'
+                +'<td colspan="6" ></td>'
+                +'<td colspan="6" ></td>'
+                +'<td colspan="6" ></td>'
+                +'<td colspan="6" ></td></tr>'
+                $(".temperatureChart tr:last").after(str);
+              }
+        </script>
+</body>
+</html>
